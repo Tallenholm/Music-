@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, "feat/**"]
+    branches: [main]
   pull_request:
 
 jobs:
@@ -23,11 +23,11 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Install audio tools (Ubuntu)
+      - name: Install audio tools and Qt runtime (Ubuntu)
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg libchromaprint-tools
+          sudo apt-get install -y ffmpeg libchromaprint-tools libegl1
 
       - name: Install audio tools (Windows)
         if: runner.os == 'Windows'
