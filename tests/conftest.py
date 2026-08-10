@@ -23,7 +23,7 @@ def real_mp3(tmp_path: Path) -> Path:
             "-f",
             "lavfi",
             "-i",
-            "sine=frequency=440:duration=2",
+            "sine=frequency=440:duration=20",
             "-q:a",
             "7",
             str(path),
