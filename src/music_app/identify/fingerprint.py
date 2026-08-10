@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import json
 import subprocess
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable, Any
+from typing import Any
 
 
 @dataclass(frozen=True, slots=True)
